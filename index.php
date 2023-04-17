@@ -18,6 +18,7 @@
   <link href="css/style.css" rel="stylesheet" media="screen">
 </head>
 
+
 <body>
 
   <!-- Loader -->
@@ -148,7 +149,7 @@
       <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="navbar-nav-mobile">
           <li class="active">
-            <a href="#">Home <i class="fa fa-angle-down"></i></a>
+            <a href="#">Home</i></a>
           </li>
           <li>
             <a href="about.php">About us</a>
@@ -157,7 +158,7 @@
             <a href="about.php">Services</a>
           </li>
           <li>
-            <a href="#">Projects <i class="fa fa-angle-down"></i></a>
+            <a href="#">Projects </i></a>
             <!-- <ul>
               <li><a href="projects.php">Projects - List</a></li>
               <li>
@@ -166,7 +167,7 @@
             </ul> -->
           </li>
           <li>
-            <a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
+            <a href="blog.html">Blog </i></a>
             <!-- <ul>
               <li><a href="blog.html">Blog - List</a></li>
               <li>
@@ -220,7 +221,7 @@
                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
-                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA - TRading &amp;
+                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA- TRading &amp;
                 Construction
               </div>
 
@@ -263,19 +264,18 @@
                 data-bgrepeat="no-repeat" class="rev-slidebg">
 
               <!-- Layer 1 -->
-
               <div class="slide-title tp-caption tp-resizeme" data-x="['right','right','right','right']"
                 data-hoffset="['-18','-18','-18','-18']" data-y="['middle','middle','middle','middle']"
-                data-voffset="['-35','-35', '-55']" data-fontsize="['50','45', '35']" data-lineheight="['80','75','65']"
-                data-width="['1100','700','500']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;"
+                data-voffset="['-35','-35', '-25']" data-fontsize="['50','45', '35']"
+                data-lineheight="['80','75', '65']" data-width="['1100','700','550']" data-height="none"
+                data-whitespace="normal" data-transform_idle="o:1;"
                 data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
-                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA - TRading &amp;
+                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA- TRading &amp;
                 Construction
               </div>
-
 
               <!-- Layer 2 -->
 
@@ -284,13 +284,11 @@
                 data-fontsize="['18']" data-whitespace="nowrap" data-transform_idle="o:1;"
                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
                 data-transform_out="opacity:0;s:1000;s:1000;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                data-start="1500" data-splitin="none" data-splitout="none">
-                Concert Hall is the architecture of a new
+                data-start="1500" data-splitin="none" data-splitout="none">Concert Hall is the architecture of a new
                 generation, a building<br>
                 that exists not only in the dimension of space,<br>
                 but also in the dimension of time and communication.
               </div>
-
               <!-- Layer 3 -->
 
               <div class="tp-caption tp-resizeme" data-x="['right','right','right','right']" data-hoffset="['0']"
@@ -321,16 +319,15 @@
               <div class="slide-title tp-caption tp-resizeme" data-x="['right','right','right','right']"
                 data-hoffset="['-18','-18','-18','-18']" data-y="['middle','middle','middle','middle']"
                 data-voffset="['-35','-35', '-25']" data-fontsize="['50','45', '35']"
-                data-lineheight="['80','75', '65']" data-width="['1000','700','550']" data-height="none"
+                data-lineheight="['80','75', '65']" data-width="['1100','700','550']" data-height="none"
                 data-whitespace="normal" data-transform_idle="o:1;"
                 data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
-                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA - TRading &amp;
+                data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">NOVEGA- TRading &amp;
                 Construction
               </div>
-
 
               <!-- Layer 2 -->
 
@@ -339,8 +336,7 @@
                 data-fontsize="['18']" data-whitespace="nowrap" data-transform_idle="o:1;"
                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
                 data-transform_out="opacity:0;s:1000;s:1000;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                data-start="1500" data-splitin="none" data-splitout="none">Exhibition Center is the architecture of a
-                Concert Hall is the architecture of a new
+                data-start="1500" data-splitin="none" data-splitout="none">Concert Hall is the architecture of a new
                 generation, a building<br>
                 that exists not only in the dimension of space,<br>
                 but also in the dimension of time and communication.
@@ -389,15 +385,15 @@
               </div>
               <div class="col-base col-about-spec col-sm-6 col-md-4">
                 <h3 class="col-about-title">our<br> specialization<span class="text-primary">:</span></h3>
-                <div class="service-item">
+                <div >
                   <img alt="" width="46" src="img/img-icon/icon-architecture.png">
                   <h4>CONSTRUCTION</h4>
                 </div>
-                <div class="service-item">
+                <div >
                   <img alt="" width="58" src="img/img-icon/icon-interiors.png">
                   <h4>TRADING</h4>
                 </div>
-                <div class="service-item">
+                <div >
                   <img alt="" width="58" src="img/img-icon/icon-planing.png">
                   <h4>SECURITY</h4>
                 </div>
@@ -454,13 +450,23 @@
       
       </section>
       <!-- Services -->
+
+
+
+
+
+
+
+
+
+
       <section id="services" class="services section">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title"><span class="text-primary">Our</span> Services</h2>
           </header>
-          <div class="section-content">
-            <div class="row-services row-base row">
+          <div class="carousel-services">
+  <div class="carousel-container">
           
               <?php
         $project_view_query="Select * from services";
@@ -472,13 +478,14 @@
           $description=$data['Description'];
           $image=$data['Image'];
           echo "
-          <div class='col-base col-service col-sm-6 col-md-4 wow fadeInUp'>
-                <div class='service-item'>
+          <div class='carousel-item'>
+                
                 <img style='width:20rem;height:15rem' alt=$name src='admin/$image'>
                   <h4>$name</h4>
                   <p>$description</p>
-                </div>
+               
               </div>
+       
           ";
           }
         }
@@ -489,6 +496,8 @@
 
 
           </div>
+          <a class="carousel-control-services prev" >&lt;</a>
+  <a class="carousel-control-services next">&gt;</a>
           </div>
         </div>
       </section>
@@ -656,7 +665,7 @@
   </div>
 
   <!-- SCRIPTS -->
-
+  <script src="js/servicesCarousel.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/smoothscroll.js"></script>

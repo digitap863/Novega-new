@@ -230,37 +230,45 @@
       </section>
 
       <!-- Services -->
-
       <section id="services" class="services section">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title"><span class="text-primary">Our</span> Services</h2>
           </header>
-          <div class="section-content">
-            <div class="row-services row-base row">
-              <?php
-              include("./admin/connection.php");
-              $project_view_query="Select * from services";
-              $result=mysqli_query($connect,$project_view_query);
-              if($result){
-                while($data=mysqli_fetch_assoc($result)){
-                $id=$data['id'];
-                $name=$data['Name'];
-                $description=$data['Description'];
-                $image=$data['Image'];
-                echo "
-                <div class='col-base col-service col-sm-6 col-md-4 wow fadeInUp'>
-                      <div class='service-item'>
-                      <img style='width:20rem;height:15rem' alt=$name src='admin/$image'>
-                        <h4>$name</h4>
-                        <p>$description</p>
-                      </div>
-                    </div>
-                ";
-                }
-              }
-              ?>
-            </div>
+          <div class="carousel-services">
+  <div class="carousel-container">
+          
+            <?php
+              include('./admin/connection.php');
+        $project_view_query="Select * from services";
+        $result=mysqli_query($connect,$project_view_query);
+        if($result){
+          while($data=mysqli_fetch_assoc($result)){
+          $id=$data['id'];
+          $name=$data['Name'];
+          $description=$data['Description'];
+          $image=$data['Image'];
+          echo "
+          <div class='carousel-item'>
+                
+                <img style='width:20rem;height:15rem' alt=$name src='admin/$image'>
+                  <h4>$name</h4>
+                  <p>$description</p>
+               
+              </div>
+       
+          ";
+          }
+        }
+        ?>
+
+
+
+
+
+          </div>
+          <a class="carousel-control-services prev" >&lt;</a>
+  <a class="carousel-control-services next">&gt;</a>
           </div>
         </div>
       </section>
@@ -471,7 +479,7 @@
   </div>
 
   <!-- SCRIPTS -->
-
+  <script src="js/servicesCarousel.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/smoothscroll.js"></script>

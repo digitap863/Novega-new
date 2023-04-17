@@ -146,7 +146,7 @@
           <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="navbar-nav-mobile">
               <li class="active">
-                <a href="#">Home <i class="fa fa-angle-down"></i></a>
+                <a href="#">Home </i></a>
               </li>
               <li>
                 <a href="about.php">About us</a>
@@ -155,7 +155,7 @@
                 <a href="about.php">Services</a>
               </li>
               <li>
-                <a href="#">Projects <i class="fa fa-angle-down"></i></a>
+                <a href="#">Projects </i></a>
                 <!-- <ul>
                   <li><a href="projects.php">Projects - List</a></li>
                   <li>
@@ -164,7 +164,7 @@
                 </ul> -->
               </li>
               <li>
-                <a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
+                <a href="blog.html">Blog </i></a>
                 <!-- <ul>
                   <li><a href="blog.html">Blog - List</a></li>
                   <li>
@@ -186,7 +186,7 @@
     
     <!-- Home -->
     
-    <main class="main main-inner main-project" style="background-image:url('img/bg/project.jpg');" data-stellar-background-ratio="0.6">
+    <main class="main main-inner main-project" style="background-image:url('./img/slider/dubai-skyline-downtown-skyscrapers-sunset-modern-architecture-concept-with-highrise-buildings-world-famous-metropolis-united-arab-emirates.jpg');" data-stellar-background-ratio="0.6">
       <div class="container">
         <header class="main-header">
           <h1>Services</h1>

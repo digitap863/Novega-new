@@ -61,9 +61,10 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
   
   <nav role='navigation'>
     <ul class="main">
-      <li class="dashboard"><a href="admin-home.php">Dashboard</a></li>
+    <li class="dashboard"><a href="admin-home.php">Dashboard</a></li>
       <li class="edit"><a href="services.php">Services</a></li>
       <li class="write"><a href="projects.php">Project</a></li>
+      <li class="write"><a href="blog.php">Blogs</a></li>
     </ul>
   </nav>
   
