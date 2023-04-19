@@ -263,7 +263,8 @@
 		items:4,
 		pagination:false,
 		navigation:true,
-		slideSpeed:700,
+		slideSpeed:300,
+		
 		responsiveRefreshRate:0
 	});
 	$(".js-services-carousel").owlCarousel({
@@ -274,7 +275,7 @@
 		items:3,
 		pagination:false,
 		navigation:true,
-		slideSpeed:700,
+		slideSpeed:300,
 		responsiveRefreshRate:0
 	});
 

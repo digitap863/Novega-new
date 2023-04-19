@@ -9,6 +9,7 @@ header("Location:index.php");
 include("./php/Image-uploading.php");
 if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name']){
   $project_name=$_POST['name'];
+  $project_description=$_POST['Description'];
   $image_name=$_FILES['Image']['name'];
   $image_size=$_FILES['Image']['size'];
   $temp_name=$_FILES['Image']['tmp_name'];
@@ -25,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
         $new_img_name=uniqid("IMG-",true).'.'.$image_exc_lc;
         $img_upload_path='project-images/'.$new_img_name;
         move_uploaded_file($temp_name,$img_upload_path);
-        $query="insert into projects (Name,Image) values('$project_name','$img_upload_path')";
+        $query="insert into projects (Name,Description,Image) values('$project_name','$project_description','$img_upload_path')";
         mysqli_query($connect,$query);
         header("Location:projects.php");
       }else{
@@ -65,6 +66,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <li class="edit"><a href="services.php">Services</a></li>
       <li class="write"><a href="projects.php">Project</a></li>
       <li class="write"><a href="blog.php">Blogs</a></li>
+      <li class="write"><a href="clients.php">Clients</a></li>
     </ul>
   </nav>
   
@@ -74,13 +76,15 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <h2>Project Page</h2>
     </section>
     
-    <section class="panel important" style="height: 350px; padding: 20px;">
+    <section class="panel important" style="height: 450px; padding: 20px;">
       <h2>Project Adding Section</h2>
         <form  method="post" enctype="multipart/form-data">
           <div class="twothirds" >
            <label for="name">Name</label>
             <input type="text" name="name" /><br/><br/>
-           <label for="Image">Image (480x880)</label>
+            <label for="name">Description</label>
+            <input type="text" name="Description" /><br/><br/>
+           <label for="Image">Image</label>
             <input type="file" name="Image"/><br/><br/>
             <button type="submit">Submit</button>
           </div>
@@ -94,6 +98,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <tr>
           <th>S/o</th>
           <th>Name</th>
+          <th>Description</th>
           <th>Image</th>
           <th>Action</th>
         </tr>
@@ -102,13 +107,15 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
         $result=mysqli_query($connect,$project_view_query);
         if($result){
           while($data=mysqli_fetch_assoc($result)){
-          $id=$data['Id'];
+          $id=$data['No'];
           $name=$data['Name'];
           $image=$data['Image'];
+          $description=$data['Description'];
           echo "
           <tr>
           <td>$id</td>
           <td>$name</td>
+          <td>$description</td>
           <td><img style='width:6rem;height:6rem' src=$image /></td>
           <td><a onClick=\"javascript: return confirm('Please confirm deletion');\" href='delete-project.php?deleteId=$id'><button style='background-color:red;color:white;padding:10px 12px;border:none;border-radius: 20px'>Delete</button></a></td>
         </tr>

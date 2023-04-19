@@ -84,41 +84,23 @@
               NO<span class="text-primary"></span>VEGA
             </a>
             <ul class="navbar-desctop-menu">
-              <li class="active">
+              <li >
                 <a href="index.php">Home</a>
-                <!-- <ul>
-                  <li><a href="../light/index.php">Home - Light</a></li>
-                  <li class="active">
-                    <a href="index.php">Home - Dark</a>
-                  </li>
-                </ul> -->
               </li>
               <li>
                 <a href="about.php">About us</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="services.php">Services</a>
               </li>
               <li>
                 <a href="projects.php">Projects</a>
-                <!-- <ul>
-                  <li><a href="projects.php">Projects - List</a></li>
-                  <li>
-                    <a href="project.html">Project - details</a>
-                  </li>
-                </ul> -->
+     
               </li>
-              <!-- <li>
-                <a href="about.php">Careers</a>
-              </li> -->
+          
               <li>
-                <a href="blog.html">Blog</a>
-                <!-- <ul>
-                  <li><a href="blog.html">Blog - List</a></li>
-                  <li>
-                    <a href="blog-details.html">Blog - Post</a>
-                  </li>
-                </ul> -->
+                <a href="blog.php">Blog</a>
+          
               </li>
               <li>
                 <a href="contacts.html">Contacts</a>
@@ -145,17 +127,17 @@
     
           <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="navbar-nav-mobile">
-              <li class="active">
-                <a href="#">Home </i></a>
+              <li >
+                <a href="index.php">Home </i></a>
               </li>
               <li>
                 <a href="about.php">About us</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="about.php">Services</a>
               </li>
               <li>
-                <a href="#">Projects </i></a>
+                <a href="projects.php">Projects </i></a>
                 <!-- <ul>
                   <li><a href="projects.php">Projects - List</a></li>
                   <li>
@@ -164,11 +146,11 @@
                 </ul> -->
               </li>
               <li>
-                <a href="blog.html">Blog </i></a>
+                <a href="blog.php">Blog </i></a>
                 <!-- <ul>
-                  <li><a href="blog.html">Blog - List</a></li>
+                  <li><a href="blog.php">Blog - List</a></li>
                   <li>
-                    <a href="blog-details.html">Blog - Post</a>
+                    <a href="blog-details.php">Blog - Post</a>
                   </li>
                 </ul> -->
               </li>
@@ -225,10 +207,10 @@
         $result=mysqli_query($connect,$project_view_query);
         if($result){
           while($data=mysqli_fetch_assoc($result)){
-          $id=$data['id'];
+          $id=$data['No'];
           $position;
           $class;
-          if($id%2==0){
+          if($id%2!=0){
             $position="Left";
             $class="col-md-offset-4";
           }else{

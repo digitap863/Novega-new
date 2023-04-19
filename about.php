@@ -84,41 +84,24 @@
           NO<span class="text-primary"></span>VEGA
         </a>
         <ul class="navbar-desctop-menu">
-          <li class="active">
-            <a href="index.php">Home</a>
-            <!-- <ul>
-              <li><a href="../light/index.php">Home - Light</a></li>
-              <li class="active">
-                <a href="index.php">Home - Dark</a>
-              </li>
-            </ul> -->
-          </li>
           <li>
-            <a href="about.php">About us</a>
+            <a href="index.php">Home</a>
+
+          </li>
+          <li class="active">
+            <a href="about.php" >About us</a>
           </li>
           <li>
             <a href="services.php">Services</a>
           </li>
           <li>
             <a href="projects.php">Projects</a>
-            <!-- <ul>
-              <li><a href="projects.php">Projects - List</a></li>
-              <li>
-                <a href="project.html">Project - details</a>
-              </li>
-            </ul> -->
+    
           </li>
-          <!-- <li>
-            <a href="about.php">Careers</a>
-          </li> -->
+    
           <li>
-            <a href="blog.html">Blog</a>
-            <!-- <ul>
-              <li><a href="blog.html">Blog - List</a></li>
-              <li>
-                <a href="blog-details.html">Blog - Post</a>
-              </li>
-            </ul> -->
+            <a href="blog.php">Blog</a>
+
           </li>
           <li>
             <a href="contacts.html">Contacts</a>
@@ -145,32 +128,20 @@
 
       <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="navbar-nav-mobile">
-          <li class="active">
-            <a href="#">Home <i class="fa fa-angle-down"></i></a>
+          <li >
+            <a href="index.php">Home </a>
           </li>
-          <li>
+          <li class="active">
             <a href="about.php">About us</a>
           </li>
           <li>
-            <a href="about.php">Services</a>
+            <a href="services.php">Services</a>
           </li>
           <li>
-            <a href="#">Projects <i class="fa fa-angle-down"></i></a>
-            <!-- <ul>
-              <li><a href="projects.php">Projects - List</a></li>
-              <li>
-                <a href="project.html">Project - details</a>
-              </li>
-            </ul> -->
+            <a href="projects.php">Projects </a>
           </li>
           <li>
-            <a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
-            <!-- <ul>
-              <li><a href="blog.html">Blog - List</a></li>
-              <li>
-                <a href="blog-details.html">Blog - Post</a>
-              </li>
-            </ul> -->
+            <a href="blog.php">Blog </i></a>
           </li>
           <li>
             <a href="contacts.html">Contacts</a>
@@ -219,59 +190,43 @@
         <div class="container">
           <div class="entry">
             <h3 class="entry-title">we turn ideas into works of <span class="text-primary">REALITY</span></h3>
-            <p class="entry-text">NOVEGA Group, a pioneer business enterprise based in the State of Qatar, is a
-              conglomerate with
-              diversified business activities. Established in the year 2007 by a corps of hardworking and
-              enterprising people, we are committed to provide value for money and quality services that comply
-              with the specified and embedded requirements of our clients. BARQ Group is an ISO 9001:2015, ISO
-              14001:2015 & BS OHSAS 18001:2007 Certified Co.</p>
+            <p class="entry-text">Novega Group International Trading WLL is a fast-growing business group based in Qatar, which was established 2009. A team of qualified professionals with more than 25 years of experiences, Our group is registering a tremendous growth every year with expansions to various business sectors. Our group has business entities across various industries that include Civil & Electro mechanical construction & maintenance, IT & Securitysystems, Interior & Fit outs, Trading & imports, Media & branding. We bring engineered solutions to projects of all sizes and also provide superior management and skilled craftsmanship to every job. Our contracting division is supported by a team of engineers, qualified professionals and skilled workers.</p>
           </div>
         </div>
       </section>
 
       <!-- Services -->
-      <section id="services" class="services section">
+      <section id="about" class="about section" style="margin-top: 3rem;">
         <div class="container">
-          <header class="section-header">
-            <h2 class="section-title"><span class="text-primary">Our</span> Services</h2>
-          </header>
-          <div class="carousel-services">
-  <div class="carousel-container">
-          
-            <?php
-              include('./admin/connection.php');
-        $project_view_query="Select * from services";
-        $result=mysqli_query($connect,$project_view_query);
-        if($result){
-          while($data=mysqli_fetch_assoc($result)){
-          $id=$data['id'];
-          $name=$data['Name'];
-          $description=$data['Description'];
-          $image=$data['Image'];
-          echo "
-          <div class='carousel-item'>
-                
-                <img style='width:20rem;height:15rem' alt=$name src='admin/$image'>
-                  <h4>$name</h4>
-                  <p>$description</p>
-               
+          <div class="section-content">
+            <div class="row-base row">
+              <div class="col-base col-sm-6 col-md-4">
+                <h3 class="col-about-title">OUR<br><span class="text-primary">VISION</span></h3>
+                <div class="col-about-info">
+                  <p>Novega Group is an engineering contracting, trading and maintenance firm which effectively utilize its resources to exceed client expectations and assist them to achieve their goals on time with quality.</p>
+                </div>
               </div>
-       
-          ";
-          }
-        }
-        ?>
-
-
-
-
-
-          </div>
-          <a class="carousel-control-services prev" >&lt;</a>
-  <a class="carousel-control-services next">&gt;</a>
+              <div class="col-base col-about-spec col-sm-6 col-md-4">
+              <h3 class="col-about-title">OUR<br><span class="text-primary">MISSION</span></h3>
+                <div class="col-about-info">
+                  <p>Novega Group is an engineering contracting, trading and maintenance firm which effectively utilize its resources to exceed client expectations and assist them to achieve their goals on time with quality.</p>
+                </div>
+             
+           
+               </div>
+            
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base col-about-img col-sm-6 col-md-4 ms-4">
+              <h3 class="col-about-title">OUR<br><span class="text-primary">VALUES</span></h3>
+                <div class="col-about-info">
+                  <p>Commitment,Responsibility,Excellence, and Leadership</p>
+                </div></div>
+        
+            </div>
           </div>
         </div>
       </section>
+
 
       <!-- Objects -->
 
@@ -284,62 +239,6 @@
             <div class="objects">
               <img alt="" class="img-responsive" src="img/map.png">
 
-              <!-- Objects -->
-
-              <!-- <div class="object-label" style="left:12.6%; top:42%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +97440011415<br>
-                    info@novega.com<br>
-                    Doha,Qatar
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 25.7%; top: 39.1%;">
-                <div class="object-info in">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div>
-
-              <div class="object-label" style="left: 32.2%; top: 80.6%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div> -->
-
-              <!-- <div class="object-label" style="left: 47.3%; top: 34.5%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div> -->
-<!-- 
-              <div class="object-label" style="left: 50.7%; top: 20.4%;">
-                <div class="object-info">
-                  <h3 class="object-title">New York</h3>
-                  <div class="object-content">
-                    +0 595-510-1352<br>
-                    flatley.don@weissnat.me<br>
-                    713 Dibbert Bridge
-                  </div>
-                </div>
-              </div> -->
 
               <div class="object-label" style="left: 62%; top: 50%;">
                 <div class="object-info">

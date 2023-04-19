@@ -29,15 +29,15 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
         move_uploaded_file($temp_name,$img_upload_path);
         $query="insert into blog (Name,Date,Description,Image) values('$Blog_name','$Blog_date','$Blog_description','$img_upload_path')";
         mysqli_query($connect,$query);
-        header("Location:projects.php");
+        header("Location:blog.php");
       }else{
         $em="you can't upload files of this type";
-        header("Location:project.php?error:$em");
+        header("Location:blog.php?error:$em");
       }
     }
   }else{
     $em="Unknown Error Occurred";
-    header("Location:project.php?error:$em");
+    header("Location:blog.php?error:$em");
   }
 }
 ?>
@@ -67,6 +67,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <li class="edit"><a href="services.php">Services</a></li>
       <li class="write"><a href="projects.php">Project</a></li>
       <li class="write"><a href="blog.php">Blogs</a></li>
+      <li class="write"><a href="clients.php">Clients</a></li>
     </ul>
   </nav>
   
@@ -121,8 +122,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
           <td>$name</td>
           <td>$date</td>
           <td>$description</td>
-          <td><img style='width:6rem;height:6rem' src=$image/></td>
-          <td><a onClick=\"javascript: return confirm('Please confirm deletion');\" href='delete-project.php?deleteId=$id'><button style='background-color:red;color:white;padding:10px 12px;border:none;border-radius: 20px'>Delete</button></a></td>
+          <td><img style='width:6rem;height:6rem' src=$image></td>
+          <td><a onClick=\"javascript: return confirm('Please confirm deletion');\" href='delete-blog.php?deleteId=$id'><button style='background-color:red;color:white;padding:10px 12px;border:none;border-radius: 20px'>Delete</button></a></td>
         </tr>
           ";
           }

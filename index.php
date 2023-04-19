@@ -54,7 +54,7 @@
     <div class="brand-panel">
       <a href="#top" class="brand js-target-scroll">
         <img src="./img/Novega_LogoOnly_white-02.png" style="    width: 10rem;
-          margin-top: -54px;
+          margin-top: -30px;
           height: auto;
           margin-left: -34px;" />
       </a>
@@ -89,12 +89,7 @@
         <ul class="navbar-desctop-menu">
           <li class="active">
             <a href="index.php">Home</a>
-            <!-- <ul>
-              <li><a href="../light/index.php">Home - Light</a></li>
-              <li class="active">
-                <a href="index.php">Home - Dark</a>
-              </li>
-            </ul> -->
+
           </li>
           <li>
             <a href="about.php">About us</a>
@@ -104,24 +99,12 @@
           </li>
           <li>
             <a href="projects.php">Projects</a>
-            <!-- <ul>
-              <li><a href="projects.php">Projects - List</a></li>
-              <li>
-                <a href="project.html">Project - details</a>
-              </li>
-            </ul> -->
+
           </li>
-          <!-- <li>
-            <a href="about.php">Careers</a>
-          </li> -->
+
           <li>
-            <a href="blog.html">Blog</a>
-            <!-- <ul>
-              <li><a href="blog.html">Blog - List</a></li>
-              <li>
-                <a href="blog-details.html">Blog - Post</a>
-              </li>
-            </ul> -->
+            <a href="blog.php">Blog</a>
+
           </li>
           <li>
             <a href="contacts.html">Contacts</a>
@@ -149,31 +132,21 @@
       <div class="collapse navbar-collapse" id="navbar-mobile">
         <ul class="navbar-nav-mobile">
           <li class="active">
-            <a href="#">Home</i></a>
+            <a href="index.php">Home</i></a>
           </li>
           <li>
             <a href="about.php">About us</a>
           </li>
           <li>
-            <a href="about.php">Services</a>
+            <a href="services.php">Services</a>
           </li>
           <li>
-            <a href="#">Projects </i></a>
-            <!-- <ul>
-              <li><a href="projects.php">Projects - List</a></li>
-              <li>
-                <a href="project.html">Project - details</a>
-              </li>
-            </ul> -->
+            <a href="projects.php">Projects </i></a>
+  
           </li>
           <li>
-            <a href="blog.html">Blog </i></a>
-            <!-- <ul>
-              <li><a href="blog.html">Blog - List</a></li>
-              <li>
-                <a href="blog-details.html">Blog - Post</a>
-              </li>
-            </ul> -->
+            <a href="blog.php">Blog </i></a>
+  
           </li>
           <li>
             <a href="contacts.html">Contacts</a>
@@ -376,11 +349,7 @@
               <div class="col-base col-sm-6 col-md-4">
                 <h3 class="col-about-title">we turn ideas into<br><span class="text-primary">REALITY</span></h3>
                 <div class="col-about-info">
-                  <p>NOVEGA Group, a pioneer business enterprise based in the State of Qatar, is a conglomerate with
-                    diversified business activities. Established in the year 2007 by a corps of hardworking and
-                    enterprising people, we are committed to provide value for money and quality services that comply
-                    with the specified and embedded requirements of our clients. BARQ Group is an ISO 9001:2015, ISO
-                    14001:2015 & BS OHSAS 18001:2007 Certified Co.</p>
+                  <p>Novega Group International Trading WLL is a fast-growing business group based in Qatar, which was established 2009. A team of qualified professionals with more than 25 years of experiences, Our group is registering a tremendous growth every year with expansions to various business sectors. Our group has business entities across various industries that include Civil & Electro mechanical construction & maintenance, IT & Securitysystems, Interior & Fit outs, Trading & imports, Media & branding.</p>
                 </div>
               </div>
               <div class="col-base col-about-spec col-sm-6 col-md-4">
@@ -414,6 +383,7 @@
           <h2 class="section-title">Our <span class="text-primary">projects</span></h2>
         </div>
         <div class="section-content">
+          
           <div class="projects-carousel js-projects-carousel js-projects-gallery">
           <?php
         include('./admin/connection.php');
@@ -421,22 +391,21 @@
         $result=mysqli_query($connect,$project_view_query);
         if($result){
           while($data=mysqli_fetch_assoc($result)){
-          $id=$data['Id'];
+          $id=$data['No'];
           $name=$data['Name'];
           $image=$data['Image'];
           echo "
-         <div class='project project-light'>
-          <a href='admin/$image'>
+         <div class='project project-light' onclick='Reload()'>
             <figure>
               <img alt=$name src='admin/$image'>
               <figcaption>
                 <h3 class='project-title'>
                  $name
                 </h3>
-                <div class='project-zoom'></div>
+         
               </figcaption>
             </figure>
-          </a>
+     
         </div>";
 
 
@@ -451,6 +420,36 @@
       </section>
       <!-- Services -->
 
+      <section id="about" class="about section" style="margin-top: 3rem;">
+        <div class="container">
+          <div class="section-content">
+            <div class="row-base row">
+              <div class="col-base col-sm-6 col-md-4">
+                <h3 class="col-about-title">OUR<br><span class="text-primary">VISION</span></h3>
+                <div class="col-about-info">
+                  <p>Novega Group is an engineering contracting, trading and maintenance firm which effectively utilize its resources to exceed client expectations and assist them to achieve their goals on time with quality.</p>
+                </div>
+              </div>
+              <div class="col-base col-about-spec col-sm-6 col-md-4">
+              <h3 class="col-about-title">OUR<br><span class="text-primary">MISSION</span></h3>
+                <div class="col-about-info">
+                  <p>Novega Group is an engineering contracting, trading and maintenance firm which effectively utilize its resources to exceed client expectations and assist them to achieve their goals on time with quality.</p>
+                </div>
+             
+           
+               </div>
+            
+              <div class="clearfix visible-sm"></div>
+              <div class="col-base col-about-img col-sm-6 col-md-4 ms-4">
+              <h3 class="col-about-title">OUR<br><span class="text-primary">VALUES</span></h3>
+                <div class="col-about-info">
+                  <p>Commitment,Responsibility,Excellence, and Leadership</p>
+                </div></div>
+        
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -473,18 +472,20 @@
         $result=mysqli_query($connect,$project_view_query);
         if($result){
           while($data=mysqli_fetch_assoc($result)){
-          $id=$data['id'];
+          $id=$data['No'];
           $name=$data['Name'];
           $description=$data['Description'];
-          $image=$data['Image'];
+          $image=$data['Logo'];
+         $text= substr($description, 0, 300);
           echo "
           <div class='carousel-item'>
-                
-                <img style='width:20rem;height:15rem' alt=$name src='admin/$image'>
+                <a style='color:white;text-decoration:none' href='services.php'>
+                <img  alt=$name src='admin/$image'>
                   <h4>$name</h4>
-                  <p>$description</p>
-               
+                  <p>$text</p>
+               </a>
               </div>
+        
        
           ";
           }
@@ -496,7 +497,7 @@
 
 
           </div>
-          <a class="carousel-control-services prev" >&lt;</a>
+          <a  class="carousel-control-services prev" >&lt;</a>
   <a class="carousel-control-services next">&gt;</a>
           </div>
         </div>
@@ -526,43 +527,32 @@
           </header>
           <div class="section-content">
             <ul class="clients-list">
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/1.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/2.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/3.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/4.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/5.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/1.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/2.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/3.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/4.png"></a>
-              </li>
-              <li class="client">
-                <a href="#"><img alt="" src="img/clients/5.png"></a>
-              </li>
+
+            <?php
+        $project_view_query="Select * from clients";
+        $result=mysqli_query($connect,$project_view_query);
+        if($result){
+          while($data=mysqli_fetch_assoc($result)){
+          $id=$data['No'];
+    
+          $image=$data['Image'];
+          echo "
+          <li class='client'>
+          <a href='#'><img alt='' src='admin/$image'></a>
+        </li>
+          ";
+
+
+          }}?>
+
             </ul>
           </div>
-          <div class="section-content">
-            <a href="#" class="btn btn-shadow-2">Work together <i class="icon-next"></i></a>
-          </div>
+       
         </div>
       </section>
+
+
+
 
       <!-- Contacts -->
 
@@ -665,6 +655,11 @@
   </div>
 
   <!-- SCRIPTS -->
+  <script>
+    function Reload(){
+      window.location.href='projects.php'
+    }
+  </script>
   <script src="js/servicesCarousel.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

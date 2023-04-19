@@ -35,6 +35,7 @@ header("Location:index.php");
       <li class="edit"><a href="services.php">Services</a></li>
       <li class="write"><a href="projects.php">Project</a></li>
       <li class="write"><a href="blog.php">Blogs</a></li>
+      <li class="write"><a href="clients.php">Clients</a></li>
     </ul>
   </nav>
   

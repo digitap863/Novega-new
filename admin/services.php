@@ -11,22 +11,31 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
   $services_name=$_POST['name'];
   $services_description=$_POST['description'];
   $image_name=$_FILES['Image']['name'];
+  $logo_name=$_FILES['Logo']['name'];
   $image_size=$_FILES['Image']['size'];
+  $logo_size=$_FILES['Logo']['size'];
   $temp_name=$_FILES['Image']['tmp_name'];
+  $logo_temp_name=$_FILES['Logo']['tmp_name'];
   $error=$_FILES['Image']['error'];
-  if($error===0){
-    if($image_size>50000000){
+  $error_logo=$_FILES['Logo']['error'];
+  if($error===0 &&$error_logo===0){
+    if($image_size>50000000&&$logo_size>50000000){
       $em="sorry your file is too large";
       header("Location:project.php?error:$em");
     }else{
       $image_exc=pathinfo($image_name,PATHINFO_EXTENSION);
+      $logo_exc=pathinfo($logo_name,PATHINFO_EXTENSION);
       $image_exc_lc=strtolower($image_exc);
+      $logo_exc_lc=strtolower($logo_exc);
       $allowed_exc=array("jpg","jpeg","png","webp");
       if(in_array($image_exc_lc,$allowed_exc)){
         $new_img_name=uniqid("IMG-",true).'.'.$image_exc_lc;
+        $new_logo_name=uniqid("IMG-",true).'.'.$logo_exc_lc;
+        $logo_upload_path='logo/'.$new_logo_name;
         $img_upload_path='services-images/'.$new_img_name;
         move_uploaded_file($temp_name,$img_upload_path);
-        $query="insert into services (Name,Description,Image) values('$services_name','$services_description','$img_upload_path')";
+        move_uploaded_file($logo_temp_name,$logo_upload_path);
+        $query="insert into services (Name,Description,Logo,Image) values('$services_name','$services_description','$logo_upload_path','$img_upload_path')";
         mysqli_query($connect,$query);
         header("Location:services.php");
       }else{
@@ -66,6 +75,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <li class="edit"><a href="services.php">Services</a></li>
       <li class="write"><a href="projects.php">Project</a></li>
       <li class="write"><a href="blog.php">Blogs</a></li>
+      <li class="write"><a href="clients.php">Clients</a></li>
     </ul>
   </nav>
   
@@ -75,7 +85,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
       <h2>Services Page</h2>
     </section>
     
-    <section class="panel important" style="height: 450px; padding: 20px;">
+    <section class="panel important" style="height: 550px; padding: 20px;">
       <h2>Services Adding Section</h2>
         <form  method="post" enctype="multipart/form-data">
           <div class="twothirds" >
@@ -83,6 +93,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
             <input type="text" name="name" /><br/><br/>
             <label for="description">Description</label>
             <input type="text" name="description" /><br/><br/>
+            <label for="Image">Logo</label>
+            <input type="file" name="Logo"/><br/><br/>
             <label for="Image">Image (780X668)</label>
             <input type="file" name="Image"/><br/><br/>
             <button type="submit">Submit</button>
@@ -97,23 +109,26 @@ if($_SERVER['REQUEST_METHOD']=='POST' && isset($_FILES['Image']) &&$_POST['name'
           <th>S/O</th>
           <th>Name</th>
           <th>Description</th>
+          <th>Logo</th>
           <th>Image</th>
           <th>Action</th>
         </tr>
-        <?php
+        <!----> <?php 
         $project_view_query="Select * from services";
         $result=mysqli_query($connect,$project_view_query);
         if($result){
           while($data=mysqli_fetch_assoc($result)){
-          $id=$data['id'];
+          $id=$data['No'];
           $name=$data['Name'];
           $description=$data['Description'];
           $image=$data['Image'];
+          $logo=$data['Logo'];
           echo "
           <tr>
           <td>$id</td>
           <td>$name</td>
           <td>$description</td>
+          <td><img style='width:6rem;height:6rem' src=$logo /></td>
           <td><img style='width:6rem;height:6rem' src=$image /></td>
           <td><a onClick=\"javascript: return confirm('Please confirm deletion');\" href='delete-services.php?deleteId=$id'><button style='background-color:red;color:white;padding:10px 12px;border:none;border-radius: 20px'>Delete</button></a></td>
         </tr>

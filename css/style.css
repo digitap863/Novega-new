@@ -554,7 +554,9 @@ label.error{
 }
 
 .col-base{
+  text-align: justify;
   margin-top: 3em;
+  padding-left: 20px;
 }
 
 .section{
@@ -1488,9 +1490,7 @@ transform: translateX(0);
   transition: all 0.5s;
 }
 
-.project.project-light figure:after{
-  opacity: 0.4;
-}
+
     
 .project figcaption{
   position: absolute;
@@ -1964,7 +1964,7 @@ img.mfp-img{
   border-radius: 0.25em 0 0 0.25em;
   overflow: hidden;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: center;
 }
 
 .blog-thumbnail-img img{
@@ -2192,7 +2192,7 @@ img.mfp-img{
 
 
 .bg-contacts{
-  background: url(../img/bg/contacts.jpg) 50% 0 no-repeat;
+  background: url(../img/bg/observation-urban-building-business-steel.jpg) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -2434,7 +2434,8 @@ img.mfp-img{
   }
 
   .col-about-spec{
-    padding: 0 4.4em;
+    padding: 0 1.4em;
+    text-align: justify;
   }
 
 
@@ -2472,7 +2473,7 @@ img.mfp-img{
     left: 0;
     top:13%;
     bottom: 13%;
-    width: 55%;
+    width: 70%;
   }
 
   .project-details-item:nth-child(odd) .project-details-img{
@@ -2537,7 +2538,7 @@ img.mfp-img{
 
 
   .col-about-img{
-    padding-left: 0;
+    padding-left: 16px;
     left: -5px;
   }
 
@@ -2620,7 +2621,7 @@ img.mfp-img{
 
 
   .project-details-info{
-    width: 44%;
+    width: 60%;
   }
 
 }
@@ -2633,6 +2634,26 @@ img.mfp-img{
 
 @media screen and (max-width: 600px) {
 
+  .carousel-item img {
+    display: none;
+
+  }
+  .vertical-panel-content {
+    z-index: 0;
+}
+  .carousel-item h4{
+    text-align: center !important;
+  }
+  .carousel-item{
+    text-align: justify !important;
+    margin-top: 3rem;
+  }
+  .carousel-control-services.next {
+    font-size: 30px !important;
+  }
+  .carousel-control-services.prev{
+    font-size: 30px !important;
+  }
 
 
   /* Slider */
@@ -2642,10 +2663,24 @@ img.mfp-img{
     height: auto !important;
 
   }
-
-
+  .carousel-item{
+    flex: 0 0 calc(100% / 1) !important;
+    padding: 20px;
+ }
+ .carousel-control-services.prev {
+  position: absolute;
+  left: 0% !important;
+  font-size: 48px;
+  color: bisque;
+}
+.carousel-control-services.next {
+  position: absolute;
+  right: 0% !important;
+  font-size: 48px;
+  color: bisque;
+}
   .arrow-left{
-    top: 120vmin;
+    top: 115vmin;
     bottom: auto;
   }
   .arrow-left{
@@ -2662,7 +2697,7 @@ z-index: 0;
     left: 15vmin;
     right:auto;
     margin-left: 5em;
-    top: 120vmin;
+    top: 115vmin;
     bottom: auto;
   }
 }
@@ -2683,10 +2718,13 @@ z-index: 0;
   flex: 0 0 calc(100% / 3);
   padding: 20px;
   text-align: center;
+
 }
 
+
+
 .carousel-item img {
-  width: 100%;
+
   max-height: 200px;
   object-fit: cover;
   border-radius: 4px;
@@ -2697,18 +2735,21 @@ z-index: 0;
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
-  color: #000;
   text-decoration: none;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+
 }
 
 .carousel-control-services.prev {
   position: absolute;
-  left: 0;
+  left: 6%;
+  font-size: 48px;
+  color: bisque;
 }
 
 .carousel-control-services.next {
   position: absolute;
-  right: 0;
+  right: 6%;
+  font-size: 48px;
+  color: bisque;
 }

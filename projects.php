@@ -84,41 +84,24 @@
             NO<span class="text-primary"></span>VEGA
           </a>
           <ul class="navbar-desctop-menu">
-            <li class="active">
+            <li >
               <a href="index.php">Home</a>
-              <!-- <ul>
-                <li><a href="../light/index.php">Home - Light</a></li>
-                <li class="active">
-                  <a href="index.php">Home - Dark</a>
-                </li>
-              </ul> -->
+
             </li>
             <li>
-              <a href="about.php">About us</a>
+              <a href="about.php" >About us</a>
             </li>
             <li>
               <a href="services.php">Services</a>
             </li>
-            <li>
+            <li class="active">
               <a href="projects.php">Projects</a>
-              <!-- <ul>
-                <li><a href="projects.php">Projects - List</a></li>
-                <li>
-                  <a href="project.html">Project - details</a>
-                </li>
-              </ul> -->
+      
             </li>
-            <!-- <li>
-              <a href="about.php">Careers</a>
-            </li> -->
+      
             <li>
-              <a href="blog.html">Blog</a>
-              <!-- <ul>
-                <li><a href="blog.html">Blog - List</a></li>
-                <li>
-                  <a href="blog-details.html">Blog - Post</a>
-                </li>
-              </ul> -->
+              <a href="blog.php">Blog</a>
+   
             </li>
             <li>
               <a href="contacts.html">Contacts</a>
@@ -145,32 +128,22 @@
   
         <div class="collapse navbar-collapse" id="navbar-mobile">
           <ul class="navbar-nav-mobile">
-            <li class="active">
-              <a href="#">Home </i></a>
+            <li >
+              <a href="index.php">Home </i></a>
             </li>
             <li>
               <a href="about.php">About us</a>
             </li>
             <li>
-              <a href="about.php">Services</a>
+              <a href="services.php">Services</a>
+            </li>
+            <li class="active">
+              <a href="projects.php">Projects </i></a>
+   
             </li>
             <li>
-              <a href="#">Projects </i></a>
-              <!-- <ul>
-                <li><a href="projects.php">Projects - List</a></li>
-                <li>
-                  <a href="project.html">Project - details</a>
-                </li>
-              </ul> -->
-            </li>
-            <li>
-              <a href="blog.html">Blog </i></a>
-              <!-- <ul>
-                <li><a href="blog.html">Blog - List</a></li>
-                <li>
-                  <a href="blog-details.html">Blog - Post</a>
-                </li>
-              </ul> -->
+              <a href="blog.php">Blog </i></a>
+
             </li>
             <li>
               <a href="contacts.html">Contacts</a>
@@ -215,40 +188,41 @@
     
       <!-- Projects -->
 
-      <section class="projects mt-5" style="margin-top: 8rem;">
-        <div class="js-projects-gallery">
-          <div class="row">
-            <?php
-            include('./admin/connection.php');
-            $project_view_query="Select * from projects";
-            $result=mysqli_query($connect,$project_view_query);
-            if($result){
-              while($data=mysqli_fetch_assoc($result)){
-              $id=$data['Id'];
-              $name=$data['Name'];
-              $image=$data['Image'];
-              echo "
-              <div class='project project-light col-sm-6 col-md-4 col-lg-3'>
-              <a href=$image title='project $id'>
-                <figure>
-                  <img alt=$name src=admin/$image>
-                  <figcaption>
-                    <h3 class='project-title'>
-                     $name
-                    </h3>
-                    <div class='project-zoom'></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            ";
+      <section class="blog-list">
+        <div class="container">
+        <?php
+        include("./admin/connection.php");
+        $project_view_query="Select * from projects";
+        $result=mysqli_query($connect,$project_view_query);
+        if($result){
+          while($data=mysqli_fetch_assoc($result)){
+          $id=$data['No'];
+          $name=$data['Name'];
+          $description=$data['Description'];
+          $image=$data['Image'];
+       
     
-              }
-            }?>
+          echo "
+          <article class='blog'>
+          <div class='row'>
+            <div class='blog-thumbnail col-md-6'>
+              <div class='blog-thumbnail-bg col-md-6 visible-md visible-lg' style='background-image:url(admin/$image);'></div>
+              <div class='blog-thumbnail-img visible-xs visible-sm'><img alt='' class='img-responsive' src=admin/$image></div>
+            </div>
+            <div class='blog-info col-md-6'>
+              <h3 class='blog-title'>
+                <a href=''>$name</a>
+              </h3>
+              <p>$description</p>
+              </div>
           </div>
-        </div>
-        <div class="section-content text-center">
-          <a href="#" class="btn btn-gray">More projects</a>
+        </article>";
+          
+       
+          }}
+ 
+          ?>
+
         </div>
       </section>
 
